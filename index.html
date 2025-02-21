@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pokemon Card Game</title>
+    <script src="utils.js"></script>
+    <script src="battle.js"></script>
+    <script src="effects.js"></script>
+    <script src="events.js"></script>
+    <script src="render.js"></script>
+    <script src="state.js"></script>
+    <style>
+      body {
+        text-align: center;
+        font-family: Arial, sans-serif;
+      }
+      canvas {
+        background-color: lightgray;
+        display: block;
+        margin: 0 auto;
+        border: 2px solid black;
+      }
+      .controls {
+        margin-top: 10px;
+      }
+      .op-button {
+        background-color: red;
+        color: white;
+        border: none;
+        padding: 5px 10px;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Pokemon Card Game</h1>
+    <canvas id="gameCanvas"></canvas>
+    <div class="controls">
+      <button id="runButton" onclick="runGame()">Start Game</button>
+      <button onclick="drawCard()">Draw Card</button>
+      <button onclick="mePlaceBattleMonster()">PlaceBtl</button>
+      <button onclick="mePlaceBenchMonster()">PlaceBnch</button>
+      <button class="op-button" onclick="drawvsCard()">Draw Op Card</button>
+      <button class="op-button" onclick="vsPlaceBattleMonster()">
+        PlaceOpBtl
+      </button>
+      <button class="op-button" onclick="vsPlaceBenchMonster()">
+        PlaceOpBnch
+      </button>
+      <button onclick="resetGame()">Reset Game</button>
+    </div>
+    <p id="cardDisplay">Drawn Card: None</p>
+    <script src="core.js"></script>
+  </body>
+</html>
